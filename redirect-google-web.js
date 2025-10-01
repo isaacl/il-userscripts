@@ -8,6 +8,8 @@
 // @match        *://www.google.com/search
 // @match        *://www.google.com/search?*
 // @run-at       document-start
+// @homepageURL  https://github.com/isaacl/il-userscripts
+// @supportURL   https://github.com/isaacl/il-userscripts/issues
 // ==/UserScript==
 
 (function() {

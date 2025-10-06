@@ -12,13 +12,23 @@
 // @supportURL   https://github.com/isaacl/il-userscripts/issues
 // ==/UserScript==
 
-(function() {
-    'use strict';
-    if (!window.location.search.includes('udm=14')) {
-        const urlParams = new URLSearchParams(window.location.search)
-        if (!urlParams.has('udm')) {
-          urlParams.append('udm', '14');
-          window.location.search = urlParams.toString();
-        }
-    }
-})();
+"use strict";
+// TODO: support other google domains. Needs both @match update and below.
+let maybeFromGoogleSearch = false;
+if (document.referrer) {
+  try {
+    const { hostname } = new URL(document.referrer);
+    maybeFromGoogleSearch = /^(www\.)?google\.com$/.test(hostname);
+  } catch (e) {}
+}
+
+// Quick check to avoid parsing URLParams, and exclude cases where
+// a user may have explicitly clicked back to 'All' for a search.
+// Could also use SessionStorage...
+if (!window.location.search.includes("udm=14") && !maybeFromGoogleSearch) {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (!urlParams.has("udm")) {
+    urlParams.append("udm", "14");
+    window.location.search = urlParams.toString();
+  }
+}

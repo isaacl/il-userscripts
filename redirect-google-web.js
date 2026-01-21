@@ -6,8 +6,6 @@
 // @author       Isaac Levy
 // @license      MIT
 // @match        *://www.google.*/search?*
-// @match        *://www.google.*/search
-// @match        *://www.google.*/search/*
 // @run-at       document-start
 // @grant        none
 // @homepageURL  https://github.com/isaacl/il-userscripts

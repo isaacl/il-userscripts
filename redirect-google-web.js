@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Always use Google Web mode (udm=14)
 // @namespace    https://github.com/isaacl
-// @version      0.2
+// @version      0.2.1
 // @description  Redirects browser search to web mode (udm=14), avoiding AI and other distractions.
 // @author       Isaac Levy
 // @license      MIT

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto redirect Google aistudio links
 // @namespace    https://github.com/isaacl
-// @version      0.2.4
+// @version      0.2.5
 // @description  Skip the redirect warning page for aistudio urls.
 // @author       Isaac Levy
 // @license      MIT
